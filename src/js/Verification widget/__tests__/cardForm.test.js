@@ -53,7 +53,6 @@ describe("CardForm jsdom tests", () => {
           .filter((logo) => logo.classList.contains("active"))
           .map((logo) => logo.dataset.name);
         expect(activeLogos).toEqual([expectedType]);
-
         const resultHTML = cardForm.resultDiv.innerHTML.trim();
         expect(resultHTML).toContain("да");
         expect(resultHTML).toContain(expectedType);
