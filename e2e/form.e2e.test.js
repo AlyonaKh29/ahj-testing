@@ -27,14 +27,13 @@ describe("Testing the card validator widget", () => {
           reject(new Error(`Server exited with code ${code}`));
         }
       });
-    }).then(async () => {
-      // После запуска сервера, запускаем Puppeteer
+    }).then(async () => {  
       browser = await puppetteer.launch({
         headless: true,
         args: [
           '--no-sandbox',
           '--disable-setuid-sandbox',
-          '--disable-gpu', // иногда помогает в безголовой среде
+          '--disable-gpu',
         ],
         slowMo: 50,
       });
@@ -55,7 +54,7 @@ describe("Testing the card validator widget", () => {
     expect(textResult.toLowerCase()).toContain("да");
 
     const activeLogos = await page.$$eval(".logo.active", (logos) =>
-      logos.map((l) => l.getAttribute("data-name")),
+      logos.map((el) => el.getAttribute("data-name")),
     );
     expect(activeLogos).toContain("МИР");
     expect(activeLogos).toEqual(["МИР"]);
