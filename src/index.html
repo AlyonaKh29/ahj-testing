@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Проверка карты</title>    
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Проверка банковской карты</h1>
+    </header>
+    <main>
+        <div class="logos" aria-label="Логотипы платежных систем">
+            <div class="logo" data-name="МИР" title="МИР">
+                <img src="./img/Mir-logo.SVG.svg" alt="МИР" />
+            </div>
+            <div class="logo" data-name="Visa" title="Visa">
+                <img src="./img/Visa_2021.svg" alt="Visa" />
+            </div>
+            <div class="logo" data-name="MasterCard" title="MasterCard">
+                <img src="./img/960px-Mastercard-logo.svg.png" alt="MasterCard" />
+            </div>
+            <div class="logo" data-name="American Express" title="American Express">
+                <img src="./img/American_Express_logo.png" alt="American Express" />
+            </div>
+            <div class="logo" data-name="Discover" title="Discover">
+                <img src="./img/Discover_Card_logo.svg" alt="Discover" />
+            </div>
+            <div class="logo" data-name="JCB" title="JCB">
+                <img src="./img/JCB_logo.svg" alt="JCB" />
+            </div>
+            <div class="logo" data-name="Diners Club" title="Diners Club">
+                <img src="./img/960px-Diners_Club_Logo3.svg.png" alt="Diners Club" />
+            </div>
+        </div>
+
+        <form class="cardForm" novalidate>
+            <input type="text" class="cardInput" placeholder="Введите номер карты" autocomplete="off" inputmode="numeric" maxlength="19" />
+            <button type="submit" class="button">Проверить</button>
+        </form>
+
+        <div class="result" aria-live="polite" aria-atomic="true" ></div>
+    </main>
+</body>
+</html>

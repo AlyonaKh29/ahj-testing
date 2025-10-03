@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 1rem;
+}
+
+.header {
+    padding: 10px 30px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    
+}
+
+.header__title {
+    font-size: 24px;
+    margin: 0;
+}
+
+.logos {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 5px;
+}
+
+.logo {
+    width: 100px;     
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    cursor: default;
+    user-select: none;
+    filter: none;
+    transition: filter 0.3s ease;
+}
+
+.checked .logo {
+    filter: grayscale(100%) opacity(0.5);
+}
+
+.checked .logo.active {
+    filter: none;
+}
+
+.logo.active {
+    filter: none;
+}
+
+.logo img {
+    max-height: 40px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.cardForm {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.cardInput {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+    padding: 8px;
+    font-size: 1rem;
+}
+
+.cardInput:focus {
+    outline: none;
+    border: 2px solid rgb(60, 189, 60); 
+    box-shadow: 0 0 5px rgb(2, 192, 2);
+}
+
+.button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: rgb(60, 189, 60);
+    color:rgb(255, 255, 255);
+}
+    
+.result {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.text-green {
+    color: green;
+}
+
+.text-red {
+    color: red;
+}
